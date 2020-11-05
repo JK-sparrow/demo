@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<span th:text="${#dates.format(date,'yyyy-MM-dd HH-mm-ss')}"></span><br>
+<span th:text="${#numbers.formatDecimal(price,1,1)}"></span><br>
+<span th:text="${#strings.abbreviate(str,60)}"></span><br>
+<span th:unless="${#strings.isEmpty(str)}">不空</span>
+<span th:text="${#strings.substring(str,0,1)}"></span>
+</body>
+</html>
